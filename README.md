@@ -1,31 +1,53 @@
-# curriculum-databases-projects-template
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+# Vet Clinic Database
 
+> This repo is created to share the result of the exercise to Microverse, by creating a Data Base about a Vet Clinic.
+
+## Live Demo
+
+There is no Live Demo for now.
+
+## Build With
+
+### Technologies
+
+🔷SQL
+
+🔷PostgreSQL
+
+### Tools
+
+💠VISUAL STUDIO CODE
 
 ## Getting Started
 
-This repository includes files with plain SQL that can be used to recreate a database:
+### Prerequisites
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+**To get a local copy up and running follow these simple example steps**.
 
+- You need to have a code editor to be able to run the code. VSCode is most preferred.
+
+### Setup
+
+- To clone the code press in the green button at the top right corner in this page
+- Select the method that you want to clone
+
+### Install
+
+- Run it in your code editor
+
+### Usage
 
 ## Authors
 
-👤 **Author1**
+👤 **@BregornOriginal**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@BregornOriginal](https://github.com/BregornOriginal)
 
-👤 **Author2**
+- Twitter: [@Bregorn](https://twitter.com/home)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/julio-gagliardi/)
 
 ## 🤝 Contributing
 
@@ -42,7 +64,3 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
