@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS public.vet_clinic (
     escape_attemps integer,
     neutered boolean,
     weight_kg numeric,
-    species character varying(100) COLLATE pg_catalog."default"
+    species character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT animals_pkey PRIMARY KEY (id)
 );
