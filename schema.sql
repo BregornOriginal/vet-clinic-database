@@ -7,5 +7,6 @@ CREATE TABLE IF NOT EXISTS public.vet_clinic (
     date_of_birth date,
     escape_attemps integer,
     neutered boolean,
-    weight_kg numeric
+    weight_kg numeric,
+    species character varying(100) COLLATE pg_catalog."default"
 );
