@@ -65,3 +65,54 @@ FROM
 WHERE
   weight_kg >= 10.4
   AND weight_kg <= 17.3;
+
+BEGIN;
+
+SELECT
+  COUNT(name)
+FROM
+  animals;
+
+SELECT
+  COUNT(name)
+FROM
+  animals
+WHERE
+  escape_attemps = 0;
+
+SELECT
+  AVG(weight_kg)
+FROM
+  animals;
+
+SELECT
+  neutered,
+  MAX(escape_attemps)
+FROM
+  animals
+GROUP BY
+  neutered;
+
+SELECT
+  species,
+  MAX(weight_kg),
+  MIN(weight_kg)
+FROM
+  animals
+GROUP BY
+  species;
+
+SELECT
+  species,
+  date_of_birth,
+  AVG(escape_attemps)
+FROM
+  animals
+WHERE
+  date_of_birth BETWEEN '1990-01-01'
+  AND '2000-12-31'
+GROUP BY
+  species,
+  date_of_birth;
+
+COMMIT;

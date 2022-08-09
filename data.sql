@@ -57,3 +57,105 @@ INSERT INTO
   )
 VALUES
   ('Devimon', 'May 12 2017', 11, true, 5);
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Charmander', '02-08-2020', 0, false, -11);
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Plantmon', '11-15-2021', 2, true, -5.7);
+
+SELECT
+  *
+FROM
+  animals;
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Squirtle', '02-04-1993', 3, false, -12.13);
+
+SELECT
+  *
+FROM
+  animals;
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Angemon', '06-12-2005', 1, true, -45);
+
+SELECT
+  *
+FROM
+  animals;
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Boarmon', '06-07-2005', 7, true, 20.4);
+
+SELECT
+  *
+FROM
+  animals;
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Blossom', '10-13-1998', 3, true, 17);
+
+SELECT
+  *
+FROM
+  animals;
+
+INSERT INTO
+  public.animals(
+    name,
+    date_of_birth,
+    escape_attemps,
+    neutered,
+    weight_kg
+  )
+VALUES
+  ('Ditto', '05-14-2022', 4, true, 22);
