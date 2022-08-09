@@ -66,6 +66,8 @@ WHERE
   weight_kg >= 10.4
   AND weight_kg <= 17.3;
 
+BEGIN;
+
 SELECT
   COUNT(name)
 FROM
@@ -112,3 +114,5 @@ WHERE
 GROUP BY
   species,
   date_of_birth;
+
+COMMIT;
