@@ -27,15 +27,14 @@ FROM
   vet_clinic
 WHERE
   neutered IN (true)
-  AND escape_attemps IN (3);
+  AND escape_attemps < 3;
 
 SELECT
   date_of_birth
 FROM
   vet_clinic
 WHERE
-  name IN ('Agumon')
-  OR name IN ('Pikachu');
+  name IN ('Agumon', 'Pikachu');
 
 SELECT
   name,
