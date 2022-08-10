@@ -9,7 +9,9 @@ CREATE TABLE IF NOT EXISTS public.animals (
     neutered boolean,
     weight_kg numeric,
     species_id integer,
+    owner_id integer,
     CONSTRAINT animals_pkey PRIMARY KEY (id),
+    CONSTRAINT owner_id FOREIGN KEY (owner_id) REFERENCES public.owners (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION NOT VALID,
     CONSTRAINT species_id FOREIGN KEY (species_id) REFERENCES public.species (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION NOT VALID
 );
 
@@ -29,3 +31,5 @@ CREATE TABLE IF NOT EXISTS public.species (
     name character varying(100) COLLATE pg_catalog."default",
     CONSTRAINT species_pkey PRIMARY KEY (id)
 );
+
+added species_id column as foreign key referencing to species table
