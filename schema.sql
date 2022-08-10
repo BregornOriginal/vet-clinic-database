@@ -11,3 +11,20 @@ CREATE TABLE IF NOT EXISTS public.vet_clinic (
     species character varying(100) COLLATE pg_catalog."default",
     CONSTRAINT animals_pkey PRIMARY KEY (id)
 );
+
+CREATE TABLE IF NOT EXISTS public.owners (
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY (
+        INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1
+    ),
+    full_name character varying(100) COLLATE pg_catalog."default",
+    age character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT owners_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.species (
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY (
+        INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1
+    ),
+    name character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT species_pkey PRIMARY KEY (id)
+);
