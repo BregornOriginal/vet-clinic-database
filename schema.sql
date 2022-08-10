@@ -31,5 +31,3 @@ CREATE TABLE IF NOT EXISTS public.species (
     name character varying(100) COLLATE pg_catalog."default",
     CONSTRAINT species_pkey PRIMARY KEY (id)
 );
-
-added species_id column as foreign key referencing to species table
