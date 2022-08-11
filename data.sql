@@ -280,3 +280,11 @@ SET
   )
 WHERE
   name IN ('Angemon', 'Boarmon');
+
+INSERT INTO
+  vets (name, age, date_of_graduation)
+VALUES
+  ('Maisy Smith', 26, '06-17-2019'),
+  ('Stephanie Mendez', 64, '05-04-1981'),
+  ('William Tatcher', 45, '04-23-2000'),
+  ('JAck Harkness', 38, '06-08-2008');
