@@ -288,3 +288,33 @@ VALUES
   ('Stephanie Mendez', 64, '05-04-1981'),
   ('William Tatcher', 45, '04-23-2000'),
   ('JAck Harkness', 38, '06-08-2008');
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'William Tatcher'
+  and species.name = 'Pokemon';
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and species.name = 'Digimon';
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and species.name = 'Pokemon';
