@@ -50,10 +50,11 @@ CREATE TABLE IF NOT EXISTS public.specializations (
     CONSTRAINT vets_id FOREIGN KEY (vets_id) REFERENCES public.vets (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-CREATE TABLE IF NOT EXISTS public.visits (
+CREATE TABLE public.visits (
     animals_id integer,
     vets_id integer,
-    visit_date date,
+    date_of_visit date,
+    PRIMARY KEY (animals_id, vets_id, date_of_visit),
     CONSTRAINT animals_id FOREIGN KEY (animals_id) REFERENCES public.animals (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION NOT VALID,
     CONSTRAINT vets_id FOREIGN KEY (vets_id) REFERENCES public.vets (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION NOT VALID
 );
