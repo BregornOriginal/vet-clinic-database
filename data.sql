@@ -280,3 +280,261 @@ SET
   )
 WHERE
   name IN ('Angemon', 'Boarmon');
+
+INSERT INTO
+  vets (name, age, date_of_graduation)
+VALUES
+  ('Maisy Smith', 26, '06-17-2019'),
+  ('Stephanie Mendez', 64, '05-04-1981'),
+  ('William Tatcher', 45, '04-23-2000'),
+  ('JAck Harkness', 38, '06-08-2008');
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'William Tatcher'
+  and species.name = 'Pokemon';
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and species.name = 'Digimon';
+
+INSERT INTO
+  specializations
+SELECT
+  species.id,
+  vets.id
+FROM
+  species
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and species.name = 'Pokemon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '05-24-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'William Tatcher'
+  and animals.name = 'Agumon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '07-22-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and animals.name = 'Agumon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '02-02-2021'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Jack Harkness'
+  and animals.name = 'Gabumon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '01-05-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Pikachu';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '03-08-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Pikachu';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '05-14-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Pikachu';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '05-04-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and animals.name = 'Devimon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '02-24-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Jack Harkness'
+  and animals.name = 'Charmander';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '12-21-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Plantmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '08-10-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'William Tatcher'
+  and animals.name = 'Plantmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '04-07-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Plantmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '09-29-2019'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and animals.name = 'Squirtle';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '10-03-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Jack Harkness'
+  and animals.name = 'Angemon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '11-04-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Jack Harkness'
+  and animals.name = 'Angemon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '01-24-2019'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Boarmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '05-15-2019'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Boarmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '02-27-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Boarmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '08-03-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Maisy Smith'
+  and animals.name = 'Boarmon';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '05-24-2020'
+FROM
+  animals
+  JOIN vets ON vets.name = 'Stephanie Mendez'
+  and animals.name = 'Blossom';
+
+INSERT INTO
+  visits
+SELECT
+  animals.id,
+  vets.id,
+  '01-11-2021'
+FROM
+  animals
+  JOIN vets ON vets.name = 'William Tatcher'
+  and animals.name = 'Blossom';
