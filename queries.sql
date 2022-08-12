@@ -196,7 +196,6 @@ WHERE
   AND escape_attemps = 0;
 
 -- Who owns the most animals?
-
 SELECT
   full_name,
   COUNT(animals.name) count
@@ -209,3 +208,103 @@ ORDER BY
   count desc
 limit
   1;
+
+SELECT
+  animals.name,
+  date_of_visit,
+  vets.name
+FROM
+  visits
+  JOIN vets ON vets.id = visits.vets_id
+  JOIN animals ON animals.id = visits.animals_id
+WHERE
+  vets.name = 'William Tatcher'
+ORDER BY
+  date_of_visit desc
+limit
+  1;
+
+SELECT
+  COUNT(animals.name),
+  vets.name
+FROM
+  visits
+  JOIN vets ON vets.id = visits.vets_id
+  JOIN animals ON animals.id = visits.animals_id
+WHERE
+  vets.name = 'Stephanie Mendez'
+GROUP BY
+  vets.name;
+
+SELECT
+  vets.name,
+  species.name
+FROM
+  vets
+  LEFT JOIN specializations ON vets.id = specializations.specie_id
+  LEFT JOIN species ON species.id = specializations.specie_id;
+
+SELECT
+  animals.name,
+  vets.name,
+  date_of_visit
+FROM
+  animals
+  JOIN visits ON animals.id = visits.vets_id
+  JOIN vets ON vets.id = visits.vets_id
+WHERE
+  vets.name = 'Stephanie Mendez'
+  AND date_of_visit BETWEEN '04-01-2020'
+  AND '08-30-2020';
+
+SELECT
+  COUNT(animals.name),
+  animals.name,
+  vets.name
+FROM
+  animals
+  JOIN visits ON visits.animals_id = animals.id
+  JOIN vets ON vets.id = visits.vets_id
+GROUP BY
+  vets.name,
+  animals.name
+ORDER BY
+  count desc
+limit
+  3;
+
+SELECT
+  animals.name,
+  vets.name,
+  date_of_visit
+FROM
+  animals
+  JOIN visits ON visits.animals_id = animals.id
+  JOIN vets ON vets.id = visits.vets_id
+WHERE
+  vets.name = 'Maisy Smith'
+GROUP BY
+  vets.name,
+  animals.name,
+  date_of_visit
+ORDER BY
+  date_of_visit asc
+limit
+  1;
+
+SELECT
+  animals.name,
+  vets.name,
+  date_of_visit
+FROM
+  animals
+  JOIN visits ON visits.animals_id = animals.id
+  JOIN vets ON vets.id = visits.vets_id
+GROUP BY
+  vets.name,
+  animals.name,
+  date_of_visit
+ORDER BY
+  date_of_visit desc
+limit
+  10;
