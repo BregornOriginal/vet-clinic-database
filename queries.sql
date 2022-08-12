@@ -209,6 +209,7 @@ ORDER BY
 limit
   1;
 
+-- Who was the last animal seen by William Tatcher?
 SELECT
   animals.name,
   date_of_visit,
@@ -224,6 +225,7 @@ ORDER BY
 limit
   1;
 
+-- How many different animals did Stephanie Mendez see?
 SELECT
   COUNT(animals.name),
   vets.name
@@ -236,6 +238,7 @@ WHERE
 GROUP BY
   vets.name;
 
+-- List all vets and their specialties, including vets with no specialties.
 SELECT
   vets.name,
   species.name
@@ -244,6 +247,7 @@ FROM
   LEFT JOIN specializations ON vets.id = specializations.specie_id
   LEFT JOIN species ON species.id = specializations.specie_id;
 
+-- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
 SELECT
   animals.name,
   vets.name,
@@ -257,6 +261,7 @@ WHERE
   AND date_of_visit BETWEEN '04-01-2020'
   AND '08-30-2020';
 
+-- What animal has the most visits to vets?
 SELECT
   COUNT(animals.name),
   animals.name,
@@ -273,6 +278,7 @@ ORDER BY
 limit
   3;
 
+-- Who was Maisy Smith's first visit?
 SELECT
   animals.name,
   vets.name,
@@ -292,6 +298,7 @@ ORDER BY
 limit
   1;
 
+-- Details for most recent visit: animal information, vet information, and date of visit.
 SELECT
   animals.name,
   vets.name,
@@ -309,6 +316,7 @@ ORDER BY
 limit
   10;
 
+-- How many visits were with a vet that did not specialize in that animal's species?
 SELECT
   COUNT(date_of_visit)
 FROM
@@ -327,6 +335,7 @@ WHERE
   )
   OR specializations.specie_id IS NULL;
 
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 SELECT
   vets.name,
   species_id,
