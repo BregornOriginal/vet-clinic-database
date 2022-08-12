@@ -308,3 +308,38 @@ ORDER BY
   date_of_visit desc
 limit
   10;
+
+SELECT
+  COUNT(date_of_visit)
+FROM
+  vets
+  LEFT JOIN visits ON visits.vets_id = vets.id
+  LEFT JOIN specializations ON specializations.vets_id = vets.id
+  LEFT JOIN animals ON visits.animals_id = animals.id
+WHERE
+  animals.species_id NOT IN (
+    SELECT
+      specie_id
+    FROM
+      specializations
+    WHERE
+      vets_id = vets.id
+  )
+  OR specializations.specie_id IS NULL;
+
+SELECT
+  vets.name,
+  species_id,
+  COUNT(animals.species_id)
+FROM
+  vets
+  LEFT JOIN visits ON visits.vets_id = vets.id
+  LEFT JOIN specializations ON specializations.vets_id = vets.id
+  LEFT JOIN animals ON visits.animals_id = animals.id
+WHERE
+  vets.name = 'Maisy Smith'
+GROUP BY
+  vets.name,
+  species_id
+ORDER BY
+  species_id DESC;
